@@ -1,14 +1,3 @@
-//
-
-var x = document.querySelectorAll("li a");
-var blueButton = document.getElementById("Transmute");
-blueButton.addEventListener("click", function() {
-  x[0].classList.add("yellow-button");
-  x[1].classList.add("yellow-button");
-  x[2].classList.add("yellow-button");
-  x[3].classList.add("yellow-button");
-});
-
 var form = $("#form");
 var sendBtn = $("#send-btn");
 
@@ -25,4 +14,21 @@ form.submit(function(event) {
   .fail(function() {
     sendBtn.val("Message Failed to Send!");
   });
+});
+
+
+$('#Transmute').click(function(){
+    $('#transmute-button-container').toggleClass('gif-background');
+});
+
+var $overlay = $('#overlay');
+
+$('.lightbox').click(function() {
+    $overlay.fadeToggle();
+    $(this).toggleClass('enlarge');
+});
+
+$overlay.click(function() {
+    $('.lightbox').removeClass('enlarge');
+    $overlay.fadeOut();
 });

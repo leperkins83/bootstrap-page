@@ -78,7 +78,21 @@ section#contact {
   background-color: rgb(81, 80, 79);
   font-family: 'Bungee Inline', cursive;
 }
-
+.overlay {
+    display: none;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, .6);
+}
+.card img.enlarge {
+    position: absolute;
+    width: auto;
+    max-height: 90vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 #gallery {
   max-width: 900px;
   margin: auto;
@@ -123,7 +137,6 @@ section.purple-title h2 {
 
 .transmute-button-container {
   position: relative;
-  background-image: url('./fma-gif.gif');
   background-position: center;
   background-size: cover;
   width: 400px;
@@ -133,8 +146,13 @@ section.purple-title h2 {
   border-radius: 50%;
 }
 
+.gif-background {
+    background-image: url('./fma-gif.gif');
+}
+
+
 button#Transmute {
-  background-image: url("./fma-circle.png");
+    background-image: url("./fma-circle.png");
   display: block;
   background-size: cover;
   background-color: rgb(85, 0, 245);
@@ -159,12 +177,16 @@ button#Transmute:focus {
 
 button#Transmute:hover {
   background-color: rgb(50, 200, 255);
+  border-width: 40px;
+  border: 10px solid #d7f4f7;
 }
 
 button#Transmute:active {
   box-shadow: none;
   top: 0;
 }
+
+
 form input {
   display:block;
   margin: 10px;
